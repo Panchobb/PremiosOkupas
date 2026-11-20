@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuestas · Premios Okupas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="trofeo">✍️</div>
+      <h1>Premios Okupas</h1>
+      <p class="sub">Antes de votar: proponé tus candidatas para las ternas abiertas.<br>
+      Después se eligen las finalistas y se votan con el resto.</p>
+    </header>
+
+    <!-- Pegá en action="..." la URL de tu Apps Script (ver README). -->
+    <form method="post" action="PEGAR_URL_DEL_APPS_SCRIPT">
+      <input type="hidden" name="tipo" value="propuesta">
+
+      <fieldset class="card">
+        <legend>¿Quién sos?</legend>
+        <div class="chips">
+          <input type="radio" name="votante" id="votante-fran" value="Fran" required><label for="votante-fran">Fran</label>
+          <input type="radio" name="votante" id="votante-fede" value="Fede" required><label for="votante-fede">Fede</label>
+          <input type="radio" name="votante" id="votante-alan" value="Alan" required><label for="votante-alan">Alan</label>
+          <input type="radio" name="votante" id="votante-andi" value="Andi" required><label for="votante-andi">Andi</label>
+          <input type="radio" name="votante" id="votante-tobi" value="Tobi" required><label for="votante-tobi">Tobi</label>
+          <input type="radio" name="votante" id="votante-titi" value="Titi" required><label for="votante-titi">Titi</label>
+          <input type="radio" name="votante" id="votante-tony" value="Tony" required><label for="votante-tony">Tony</label>
+          <input type="radio" name="votante" id="votante-nacho" value="Nacho" required><label for="votante-nacho">Nacho</label>
+          <input type="radio" name="votante" id="votante-nano" value="Nano" required><label for="votante-nano">Nano</label>
+          <input type="radio" name="votante" id="votante-el-enano" value="El Enano" required><label for="votante-el-enano">El Enano</label>
+          <input type="radio" name="votante" id="votante-petalo" value="Pétalo" required><label for="votante-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">18</span>Mejor anécdota</legend>
+        <textarea name="c18" rows="4" maxlength="500" placeholder="Contala corta"></textarea>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">23</span>Frase del año</legend>
+        <textarea name="c23" rows="4" maxlength="500" placeholder="La frase y quién la dijo"></textarea>
+      </fieldset>
+
+      <div class="barra">
+        <p class="nota">Podés dejar alguna vacía. Si mandás de nuevo, se reemplaza lo que mandaste antes.</p>
+        <button class="btn" type="submit">Mandar propuestas</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+:root {
+  --bg: #0e0c0a;
+  --card: #1a1714;
+  --line: #2e2924;
+  --text: #f3ede4;
+  --muted: #a59a8c;
+  --gold: #e6b450;
+  --ok: #7fd18b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+header { text-align: center; margin-bottom: 28px; }
+.trofeo { font-size: 44px; }
+h1 {
+  margin: 4px 0 6px;
+  font-size: clamp(30px, 7vw, 46px);
+  letter-spacing: -0.02em;
+  color: var(--gold);
+}
+.sub { color: var(--muted); margin: 0; }
+
+/* Cada terna */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px 18px;
+  margin: 0 0 14px;
+  min-width: 0;
+}
+legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+legend .n { color: var(--muted); font-size: 13px; font-weight: 400; margin-right: 10px; }
+/* Tilde verde cuando la terna ya tiene voto */
+.card:has(input:checked) legend::after { content: ' ✓'; color: var(--ok); }
+
+/* Opciones como botones: el radio queda oculto y se ve el label */
+.chips { clear: both; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.chips label {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+.chips label:hover { border-color: var(--gold); }
+.chips input:focus-visible + label { outline: 2px solid var(--gold); outline-offset: 2px; }
+.chips input:checked + label {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #1a1205;
+  font-weight: 600;
+}
+
+/* Ternas abiertas */
+.seccion { margin: 36px 0 2px; font-size: 22px; color: var(--gold); text-align: center; }
+.seccion-sub { text-align: center; margin-bottom: 16px; }
+.vacio { clear: both; color: var(--muted); font-size: 14px; margin: 0; }
+.chips.largas { flex-direction: column; }
+.chips.largas label { border-radius: 12px; padding: 10px 14px; white-space: pre-line; }
+textarea {
+  clear: both;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+.nota { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+
+/* Botón de enviar */
+.barra { text-align: center; margin-top: 24px; }
+.aviso { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+form:valid .aviso { visibility: hidden; }
+.btn {
+  background: var(--gold);
+  color: #1a1205;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+form:invalid .btn { opacity: 0.45; }

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premios Okupas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="trofeo">🏆</div>
+      <h1>Premios Okupas</h1>
+      <p class="sub">Votá una opción por terna. El voto es secreto.</p>
+    </header>
+
+    <!-- Pegá en action="..." la URL de tu Apps Script (ver README). -->
+    <form method="post" action="PEGAR_URL_DEL_APPS_SCRIPT">
+      <input type="hidden" name="tipo" value="voto">
+
+      <fieldset class="card">
+        <legend>¿Quién sos?</legend>
+        <div class="chips">
+          <input type="radio" name="votante" id="votante-fran" value="Fran" required><label for="votante-fran">Fran</label>
+          <input type="radio" name="votante" id="votante-fede" value="Fede" required><label for="votante-fede">Fede</label>
+          <input type="radio" name="votante" id="votante-alan" value="Alan" required><label for="votante-alan">Alan</label>
+          <input type="radio" name="votante" id="votante-andi" value="Andi" required><label for="votante-andi">Andi</label>
+          <input type="radio" name="votante" id="votante-tobi" value="Tobi" required><label for="votante-tobi">Tobi</label>
+          <input type="radio" name="votante" id="votante-titi" value="Titi" required><label for="votante-titi">Titi</label>
+          <input type="radio" name="votante" id="votante-tony" value="Tony" required><label for="votante-tony">Tony</label>
+          <input type="radio" name="votante" id="votante-nacho" value="Nacho" required><label for="votante-nacho">Nacho</label>
+          <input type="radio" name="votante" id="votante-nano" value="Nano" required><label for="votante-nano">Nano</label>
+          <input type="radio" name="votante" id="votante-el-enano" value="El Enano" required><label for="votante-el-enano">El Enano</label>
+          <input type="radio" name="votante" id="votante-petalo" value="Pétalo" required><label for="votante-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">01</span>Glow up</legend>
+        <div class="chips">
+          <input type="radio" name="c1" id="c1-fran" value="Fran" required><label for="c1-fran">Fran</label>
+          <input type="radio" name="c1" id="c1-fede" value="Fede" required><label for="c1-fede">Fede</label>
+          <input type="radio" name="c1" id="c1-alan" value="Alan" required><label for="c1-alan">Alan</label>
+          <input type="radio" name="c1" id="c1-andi" value="Andi" required><label for="c1-andi">Andi</label>
+          <input type="radio" name="c1" id="c1-tobi" value="Tobi" required><label for="c1-tobi">Tobi</label>
+          <input type="radio" name="c1" id="c1-titi" value="Titi" required><label for="c1-titi">Titi</label>
+          <input type="radio" name="c1" id="c1-tony" value="Tony" required><label for="c1-tony">Tony</label>
+          <input type="radio" name="c1" id="c1-nacho" value="Nacho" required><label for="c1-nacho">Nacho</label>
+          <input type="radio" name="c1" id="c1-nano" value="Nano" required><label for="c1-nano">Nano</label>
+          <input type="radio" name="c1" id="c1-el-enano" value="El Enano" required><label for="c1-el-enano">El Enano</label>
+          <input type="radio" name="c1" id="c1-petalo" value="Pétalo" required><label for="c1-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">02</span>Downgrade</legend>
+        <div class="chips">
+          <input type="radio" name="c2" id="c2-fran" value="Fran" required><label for="c2-fran">Fran</label>
+          <input type="radio" name="c2" id="c2-fede" value="Fede" required><label for="c2-fede">Fede</label>
+          <input type="radio" name="c2" id="c2-alan" value="Alan" required><label for="c2-alan">Alan</label>
+          <input type="radio" name="c2" id="c2-andi" value="Andi" required><label for="c2-andi">Andi</label>
+          <input type="radio" name="c2" id="c2-tobi" value="Tobi" required><label for="c2-tobi">Tobi</label>
+          <input type="radio" name="c2" id="c2-titi" value="Titi" required><label for="c2-titi">Titi</label>
+          <input type="radio" name="c2" id="c2-tony" value="Tony" required><label for="c2-tony">Tony</label>
+          <input type="radio" name="c2" id="c2-nacho" value="Nacho" required><label for="c2-nacho">Nacho</label>
+          <input type="radio" name="c2" id="c2-nano" value="Nano" required><label for="c2-nano">Nano</label>
+          <input type="radio" name="c2" id="c2-el-enano" value="El Enano" required><label for="c2-el-enano">El Enano</label>
+          <input type="radio" name="c2" id="c2-petalo" value="Pétalo" required><label for="c2-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">03</span>Mejor vestido</legend>
+        <div class="chips">
+          <input type="radio" name="c3" id="c3-fran" value="Fran" required><label for="c3-fran">Fran</label>
+          <input type="radio" name="c3" id="c3-fede" value="Fede" required><label for="c3-fede">Fede</label>
+          <input type="radio" name="c3" id="c3-alan" value="Alan" required><label for="c3-alan">Alan</label>
+          <input type="radio" name="c3" id="c3-andi" value="Andi" required><label for="c3-andi">Andi</label>
+          <input type="radio" name="c3" id="c3-tobi" value="Tobi" required><label for="c3-tobi">Tobi</label>
+          <input type="radio" name="c3" id="c3-titi" value="Titi" required><label for="c3-titi">Titi</label>
+          <input type="radio" name="c3" id="c3-tony" value="Tony" required><label for="c3-tony">Tony</label>
+          <input type="radio" name="c3" id="c3-nacho" value="Nacho" required><label for="c3-nacho">Nacho</label>
+          <input type="radio" name="c3" id="c3-nano" value="Nano" required><label for="c3-nano">Nano</label>
+          <input type="radio" name="c3" id="c3-el-enano" value="El Enano" required><label for="c3-el-enano">El Enano</label>
+          <input type="radio" name="c3" id="c3-petalo" value="Pétalo" required><label for="c3-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">04</span>Peor vestido</legend>
+        <div class="chips">
+          <input type="radio" name="c4" id="c4-fran" value="Fran" required><label for="c4-fran">Fran</label>
+          <input type="radio" name="c4" id="c4-fede" value="Fede" required><label for="c4-fede">Fede</label>
+          <input type="radio" name="c4" id="c4-alan" value="Alan" required><label for="c4-alan">Alan</label>
+          <input type="radio" name="c4" id="c4-andi" value="Andi" required><label for="c4-andi">Andi</label>
+          <input type="radio" name="c4" id="c4-tobi" value="Tobi" required><label for="c4-tobi">Tobi</label>
+          <input type="radio" name="c4" id="c4-titi" value="Titi" required><label for="c4-titi">Titi</label>
+          <input type="radio" name="c4" id="c4-tony" value="Tony" required><label for="c4-tony">Tony</label>
+          <input type="radio" name="c4" id="c4-nacho" value="Nacho" required><label for="c4-nacho">Nacho</label>
+          <input type="radio" name="c4" id="c4-nano" value="Nano" required><label for="c4-nano">Nano</label>
+          <input type="radio" name="c4" id="c4-el-enano" value="El Enano" required><label for="c4-el-enano">El Enano</label>
+          <input type="radio" name="c4" id="c4-petalo" value="Pétalo" required><label for="c4-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">05</span>Gym bro</legend>
+        <div class="chips">
+          <input type="radio" name="c5" id="c5-fran" value="Fran" required><label for="c5-fran">Fran</label>
+          <input type="radio" name="c5" id="c5-fede" value="Fede" required><label for="c5-fede">Fede</label>
+          <input type="radio" name="c5" id="c5-alan" value="Alan" required><label for="c5-alan">Alan</label>
+          <input type="radio" name="c5" id="c5-andi" value="Andi" required><label for="c5-andi">Andi</label>
+          <input type="radio" name="c5" id="c5-tobi" value="Tobi" required><label for="c5-tobi">Tobi</label>
+          <input type="radio" name="c5" id="c5-titi" value="Titi" required><label for="c5-titi">Titi</label>
+          <input type="radio" name="c5" id="c5-tony" value="Tony" required><label for="c5-tony">Tony</label>
+          <input type="radio" name="c5" id="c5-nacho" value="Nacho" required><label for="c5-nacho">Nacho</label>
+          <input type="radio" name="c5" id="c5-nano" value="Nano" required><label for="c5-nano">Nano</label>
+          <input type="radio" name="c5" id="c5-el-enano" value="El Enano" required><label for="c5-el-enano">El Enano</label>
+          <input type="radio" name="c5" id="c5-petalo" value="Pétalo" required><label for="c5-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">06</span>Tóxico</legend>
+        <div class="chips">
+          <input type="radio" name="c6" id="c6-fran" value="Fran" required><label for="c6-fran">Fran</label>
+          <input type="radio" name="c6" id="c6-fede" value="Fede" required><label for="c6-fede">Fede</label>
+          <input type="radio" name="c6" id="c6-alan" value="Alan" required><label for="c6-alan">Alan</label>
+          <input type="radio" name="c6" id="c6-andi" value="Andi" required><label for="c6-andi">Andi</label>
+          <input type="radio" name="c6" id="c6-tobi" value="Tobi" required><label for="c6-tobi">Tobi</label>
+          <input type="radio" name="c6" id="c6-titi" value="Titi" required><label for="c6-titi">Titi</label>
+          <input type="radio" name="c6" id="c6-tony" value="Tony" required><label for="c6-tony">Tony</label>
+          <input type="radio" name="c6" id="c6-nacho" value="Nacho" required><label for="c6-nacho">Nacho</label>
+          <input type="radio" name="c6" id="c6-nano" value="Nano" required><label for="c6-nano">Nano</label>
+          <input type="radio" name="c6" id="c6-el-enano" value="El Enano" required><label for="c6-el-enano">El Enano</label>
+          <input type="radio" name="c6" id="c6-petalo" value="Pétalo" required><label for="c6-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">07</span>+ Levanté</legend>
+        <div class="chips">
+          <input type="radio" name="c7" id="c7-fran" value="Fran" required><label for="c7-fran">Fran</label>
+          <input type="radio" name="c7" id="c7-fede" value="Fede" required><label for="c7-fede">Fede</label>
+          <input type="radio" name="c7" id="c7-alan" value="Alan" required><label for="c7-alan">Alan</label>
+          <input type="radio" name="c7" id="c7-andi" value="Andi" required><label for="c7-andi">Andi</label>
+          <input type="radio" name="c7" id="c7-tobi" value="Tobi" required><label for="c7-tobi">Tobi</label>
+          <input type="radio" name="c7" id="c7-titi" value="Titi" required><label for="c7-titi">Titi</label>
+          <input type="radio" name="c7" id="c7-tony" value="Tony" required><label for="c7-tony">Tony</label>
+          <input type="radio" name="c7" id="c7-nacho" value="Nacho" required><label for="c7-nacho">Nacho</label>
+          <input type="radio" name="c7" id="c7-nano" value="Nano" required><label for="c7-nano">Nano</label>
+          <input type="radio" name="c7" id="c7-el-enano" value="El Enano" required><label for="c7-el-enano">El Enano</label>
+          <input type="radio" name="c7" id="c7-petalo" value="Pétalo" required><label for="c7-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">08</span>Come gatos</legend>
+        <div class="chips">
+          <input type="radio" name="c8" id="c8-fran" value="Fran" required><label for="c8-fran">Fran</label>
+          <input type="radio" name="c8" id="c8-fede" value="Fede" required><label for="c8-fede">Fede</label>
+          <input type="radio" name="c8" id="c8-alan" value="Alan" required><label for="c8-alan">Alan</label>
+          <input type="radio" name="c8" id="c8-andi" value="Andi" required><label for="c8-andi">Andi</label>
+          <input type="radio" name="c8" id="c8-tobi" value="Tobi" required><label for="c8-tobi">Tobi</label>
+          <input type="radio" name="c8" id="c8-titi" value="Titi" required><label for="c8-titi">Titi</label>
+          <input type="radio" name="c8" id="c8-tony" value="Tony" required><label for="c8-tony">Tony</label>
+          <input type="radio" name="c8" id="c8-nacho" value="Nacho" required><label for="c8-nacho">Nacho</label>
+          <input type="radio" name="c8" id="c8-nano" value="Nano" required><label for="c8-nano">Nano</label>
+          <input type="radio" name="c8" id="c8-el-enano" value="El Enano" required><label for="c8-el-enano">El Enano</label>
+          <input type="radio" name="c8" id="c8-petalo" value="Pétalo" required><label for="c8-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">09</span>Desaparecido</legend>
+        <div class="chips">
+          <input type="radio" name="c9" id="c9-fran" value="Fran" required><label for="c9-fran">Fran</label>
+          <input type="radio" name="c9" id="c9-fede" value="Fede" required><label for="c9-fede">Fede</label>
+          <input type="radio" name="c9" id="c9-alan" value="Alan" required><label for="c9-alan">Alan</label>
+          <input type="radio" name="c9" id="c9-andi" value="Andi" required><label for="c9-andi">Andi</label>
+          <input type="radio" name="c9" id="c9-tobi" value="Tobi" required><label for="c9-tobi">Tobi</label>
+          <input type="radio" name="c9" id="c9-titi" value="Titi" required><label for="c9-titi">Titi</label>
+          <input type="radio" name="c9" id="c9-tony" value="Tony" required><label for="c9-tony">Tony</label>
+          <input type="radio" name="c9" id="c9-nacho" value="Nacho" required><label for="c9-nacho">Nacho</label>
+          <input type="radio" name="c9" id="c9-nano" value="Nano" required><label for="c9-nano">Nano</label>
+          <input type="radio" name="c9" id="c9-el-enano" value="El Enano" required><label for="c9-el-enano">El Enano</label>
+          <input type="radio" name="c9" id="c9-petalo" value="Pétalo" required><label for="c9-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">10</span>Héroe</legend>
+        <div class="chips">
+          <input type="radio" name="c10" id="c10-fran" value="Fran" required><label for="c10-fran">Fran</label>
+          <input type="radio" name="c10" id="c10-fede" value="Fede" required><label for="c10-fede">Fede</label>
+          <input type="radio" name="c10" id="c10-alan" value="Alan" required><label for="c10-alan">Alan</label>
+          <input type="radio" name="c10" id="c10-andi" value="Andi" required><label for="c10-andi">Andi</label>
+          <input type="radio" name="c10" id="c10-tobi" value="Tobi" required><label for="c10-tobi">Tobi</label>
+          <input type="radio" name="c10" id="c10-titi" value="Titi" required><label for="c10-titi">Titi</label>
+          <input type="radio" name="c10" id="c10-tony" value="Tony" required><label for="c10-tony">Tony</label>
+          <input type="radio" name="c10" id="c10-nacho" value="Nacho" required><label for="c10-nacho">Nacho</label>
+          <input type="radio" name="c10" id="c10-nano" value="Nano" required><label for="c10-nano">Nano</label>
+          <input type="radio" name="c10" id="c10-el-enano" value="El Enano" required><label for="c10-el-enano">El Enano</label>
+          <input type="radio" name="c10" id="c10-petalo" value="Pétalo" required><label for="c10-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">11</span>Comediante</legend>
+        <div class="chips">
+          <input type="radio" name="c11" id="c11-fran" value="Fran" required><label for="c11-fran">Fran</label>
+          <input type="radio" name="c11" id="c11-fede" value="Fede" required><label for="c11-fede">Fede</label>
+          <input type="radio" name="c11" id="c11-alan" value="Alan" required><label for="c11-alan">Alan</label>
+          <input type="radio" name="c11" id="c11-andi" value="Andi" required><label for="c11-andi">Andi</label>
+          <input type="radio" name="c11" id="c11-tobi" value="Tobi" required><label for="c11-tobi">Tobi</label>
+          <input type="radio" name="c11" id="c11-titi" value="Titi" required><label for="c11-titi">Titi</label>
+          <input type="radio" name="c11" id="c11-tony" value="Tony" required><label for="c11-tony">Tony</label>
+          <input type="radio" name="c11" id="c11-nacho" value="Nacho" required><label for="c11-nacho">Nacho</label>
+          <input type="radio" name="c11" id="c11-nano" value="Nano" required><label for="c11-nano">Nano</label>
+          <input type="radio" name="c11" id="c11-el-enano" value="El Enano" required><label for="c11-el-enano">El Enano</label>
+          <input type="radio" name="c11" id="c11-petalo" value="Pétalo" required><label for="c11-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">12</span>NPC</legend>
+        <div class="chips">
+          <input type="radio" name="c12" id="c12-fran" value="Fran" required><label for="c12-fran">Fran</label>
+          <input type="radio" name="c12" id="c12-fede" value="Fede" required><label for="c12-fede">Fede</label>
+          <input type="radio" name="c12" id="c12-alan" value="Alan" required><label for="c12-alan">Alan</label>
+          <input type="radio" name="c12" id="c12-andi" value="Andi" required><label for="c12-andi">Andi</label>
+          <input type="radio" name="c12" id="c12-tobi" value="Tobi" required><label for="c12-tobi">Tobi</label>
+          <input type="radio" name="c12" id="c12-titi" value="Titi" required><label for="c12-titi">Titi</label>
+          <input type="radio" name="c12" id="c12-tony" value="Tony" required><label for="c12-tony">Tony</label>
+          <input type="radio" name="c12" id="c12-nacho" value="Nacho" required><label for="c12-nacho">Nacho</label>
+          <input type="radio" name="c12" id="c12-nano" value="Nano" required><label for="c12-nano">Nano</label>
+          <input type="radio" name="c12" id="c12-el-enano" value="El Enano" required><label for="c12-el-enano">El Enano</label>
+          <input type="radio" name="c12" id="c12-petalo" value="Pétalo" required><label for="c12-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">13</span>Fumón</legend>
+        <div class="chips">
+          <input type="radio" name="c13" id="c13-fran" value="Fran" required><label for="c13-fran">Fran</label>
+          <input type="radio" name="c13" id="c13-fede" value="Fede" required><label for="c13-fede">Fede</label>
+          <input type="radio" name="c13" id="c13-alan" value="Alan" required><label for="c13-alan">Alan</label>
+          <input type="radio" name="c13" id="c13-andi" value="Andi" required><label for="c13-andi">Andi</label>
+          <input type="radio" name="c13" id="c13-tobi" value="Tobi" required><label for="c13-tobi">Tobi</label>
+          <input type="radio" name="c13" id="c13-titi" value="Titi" required><label for="c13-titi">Titi</label>
+          <input type="radio" name="c13" id="c13-tony" value="Tony" required><label for="c13-tony">Tony</label>
+          <input type="radio" name="c13" id="c13-nacho" value="Nacho" required><label for="c13-nacho">Nacho</label>
+          <input type="radio" name="c13" id="c13-nano" value="Nano" required><label for="c13-nano">Nano</label>
+          <input type="radio" name="c13" id="c13-el-enano" value="El Enano" required><label for="c13-el-enano">El Enano</label>
+          <input type="radio" name="c13" id="c13-petalo" value="Pétalo" required><label for="c13-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">14</span>Borracho</legend>
+        <div class="chips">
+          <input type="radio" name="c14" id="c14-fran" value="Fran" required><label for="c14-fran">Fran</label>
+          <input type="radio" name="c14" id="c14-fede" value="Fede" required><label for="c14-fede">Fede</label>
+          <input type="radio" name="c14" id="c14-alan" value="Alan" required><label for="c14-alan">Alan</label>
+          <input type="radio" name="c14" id="c14-andi" value="Andi" required><label for="c14-andi">Andi</label>
+          <input type="radio" name="c14" id="c14-tobi" value="Tobi" required><label for="c14-tobi">Tobi</label>
+          <input type="radio" name="c14" id="c14-titi" value="Titi" required><label for="c14-titi">Titi</label>
+          <input type="radio" name="c14" id="c14-tony" value="Tony" required><label for="c14-tony">Tony</label>
+          <input type="radio" name="c14" id="c14-nacho" value="Nacho" required><label for="c14-nacho">Nacho</label>
+          <input type="radio" name="c14" id="c14-nano" value="Nano" required><label for="c14-nano">Nano</label>
+          <input type="radio" name="c14" id="c14-el-enano" value="El Enano" required><label for="c14-el-enano">El Enano</label>
+          <input type="radio" name="c14" id="c14-petalo" value="Pétalo" required><label for="c14-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">15</span>Plot twist</legend>
+        <div class="chips">
+          <input type="radio" name="c15" id="c15-fran" value="Fran" required><label for="c15-fran">Fran</label>
+          <input type="radio" name="c15" id="c15-fede" value="Fede" required><label for="c15-fede">Fede</label>
+          <input type="radio" name="c15" id="c15-alan" value="Alan" required><label for="c15-alan">Alan</label>
+          <input type="radio" name="c15" id="c15-andi" value="Andi" required><label for="c15-andi">Andi</label>
+          <input type="radio" name="c15" id="c15-tobi" value="Tobi" required><label for="c15-tobi">Tobi</label>
+          <input type="radio" name="c15" id="c15-titi" value="Titi" required><label for="c15-titi">Titi</label>
+          <input type="radio" name="c15" id="c15-tony" value="Tony" required><label for="c15-tony">Tony</label>
+          <input type="radio" name="c15" id="c15-nacho" value="Nacho" required><label for="c15-nacho">Nacho</label>
+          <input type="radio" name="c15" id="c15-nano" value="Nano" required><label for="c15-nano">Nano</label>
+          <input type="radio" name="c15" id="c15-el-enano" value="El Enano" required><label for="c15-el-enano">El Enano</label>
+          <input type="radio" name="c15" id="c15-petalo" value="Pétalo" required><label for="c15-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">16</span>Organizador</legend>
+        <div class="chips">
+          <input type="radio" name="c16" id="c16-fran" value="Fran" required><label for="c16-fran">Fran</label>
+          <input type="radio" name="c16" id="c16-fede" value="Fede" required><label for="c16-fede">Fede</label>
+          <input type="radio" name="c16" id="c16-alan" value="Alan" required><label for="c16-alan">Alan</label>
+          <input type="radio" name="c16" id="c16-andi" value="Andi" required><label for="c16-andi">Andi</label>
+          <input type="radio" name="c16" id="c16-tobi" value="Tobi" required><label for="c16-tobi">Tobi</label>
+          <input type="radio" name="c16" id="c16-titi" value="Titi" required><label for="c16-titi">Titi</label>
+          <input type="radio" name="c16" id="c16-tony" value="Tony" required><label for="c16-tony">Tony</label>
+          <input type="radio" name="c16" id="c16-nacho" value="Nacho" required><label for="c16-nacho">Nacho</label>
+          <input type="radio" name="c16" id="c16-nano" value="Nano" required><label for="c16-nano">Nano</label>
+          <input type="radio" name="c16" id="c16-el-enano" value="El Enano" required><label for="c16-el-enano">El Enano</label>
+          <input type="radio" name="c16" id="c16-petalo" value="Pétalo" required><label for="c16-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">17</span>Segundero</legend>
+        <div class="chips">
+          <input type="radio" name="c17" id="c17-fran" value="Fran" required><label for="c17-fran">Fran</label>
+          <input type="radio" name="c17" id="c17-fede" value="Fede" required><label for="c17-fede">Fede</label>
+          <input type="radio" name="c17" id="c17-alan" value="Alan" required><label for="c17-alan">Alan</label>
+          <input type="radio" name="c17" id="c17-andi" value="Andi" required><label for="c17-andi">Andi</label>
+          <input type="radio" name="c17" id="c17-tobi" value="Tobi" required><label for="c17-tobi">Tobi</label>
+          <input type="radio" name="c17" id="c17-titi" value="Titi" required><label for="c17-titi">Titi</label>
+          <input type="radio" name="c17" id="c17-tony" value="Tony" required><label for="c17-tony">Tony</label>
+          <input type="radio" name="c17" id="c17-nacho" value="Nacho" required><label for="c17-nacho">Nacho</label>
+          <input type="radio" name="c17" id="c17-nano" value="Nano" required><label for="c17-nano">Nano</label>
+          <input type="radio" name="c17" id="c17-el-enano" value="El Enano" required><label for="c17-el-enano">El Enano</label>
+          <input type="radio" name="c17" id="c17-petalo" value="Pétalo" required><label for="c17-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">19</span>Chófer</legend>
+        <div class="chips">
+          <input type="radio" name="c19" id="c19-fran" value="Fran" required><label for="c19-fran">Fran</label>
+          <input type="radio" name="c19" id="c19-fede" value="Fede" required><label for="c19-fede">Fede</label>
+          <input type="radio" name="c19" id="c19-alan" value="Alan" required><label for="c19-alan">Alan</label>
+          <input type="radio" name="c19" id="c19-andi" value="Andi" required><label for="c19-andi">Andi</label>
+          <input type="radio" name="c19" id="c19-tobi" value="Tobi" required><label for="c19-tobi">Tobi</label>
+          <input type="radio" name="c19" id="c19-titi" value="Titi" required><label for="c19-titi">Titi</label>
+          <input type="radio" name="c19" id="c19-tony" value="Tony" required><label for="c19-tony">Tony</label>
+          <input type="radio" name="c19" id="c19-nacho" value="Nacho" required><label for="c19-nacho">Nacho</label>
+          <input type="radio" name="c19" id="c19-nano" value="Nano" required><label for="c19-nano">Nano</label>
+          <input type="radio" name="c19" id="c19-el-enano" value="El Enano" required><label for="c19-el-enano">El Enano</label>
+          <input type="radio" name="c19" id="c19-petalo" value="Pétalo" required><label for="c19-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">20</span>Desarrollo de pj</legend>
+        <div class="chips">
+          <input type="radio" name="c20" id="c20-fran" value="Fran" required><label for="c20-fran">Fran</label>
+          <input type="radio" name="c20" id="c20-fede" value="Fede" required><label for="c20-fede">Fede</label>
+          <input type="radio" name="c20" id="c20-alan" value="Alan" required><label for="c20-alan">Alan</label>
+          <input type="radio" name="c20" id="c20-andi" value="Andi" required><label for="c20-andi">Andi</label>
+          <input type="radio" name="c20" id="c20-tobi" value="Tobi" required><label for="c20-tobi">Tobi</label>
+          <input type="radio" name="c20" id="c20-titi" value="Titi" required><label for="c20-titi">Titi</label>
+          <input type="radio" name="c20" id="c20-tony" value="Tony" required><label for="c20-tony">Tony</label>
+          <input type="radio" name="c20" id="c20-nacho" value="Nacho" required><label for="c20-nacho">Nacho</label>
+          <input type="radio" name="c20" id="c20-nano" value="Nano" required><label for="c20-nano">Nano</label>
+          <input type="radio" name="c20" id="c20-el-enano" value="El Enano" required><label for="c20-el-enano">El Enano</label>
+          <input type="radio" name="c20" id="c20-petalo" value="Pétalo" required><label for="c20-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">21</span>Pj revelación</legend>
+        <div class="chips">
+          <input type="radio" name="c21" id="c21-fran" value="Fran" required><label for="c21-fran">Fran</label>
+          <input type="radio" name="c21" id="c21-fede" value="Fede" required><label for="c21-fede">Fede</label>
+          <input type="radio" name="c21" id="c21-alan" value="Alan" required><label for="c21-alan">Alan</label>
+          <input type="radio" name="c21" id="c21-andi" value="Andi" required><label for="c21-andi">Andi</label>
+          <input type="radio" name="c21" id="c21-tobi" value="Tobi" required><label for="c21-tobi">Tobi</label>
+          <input type="radio" name="c21" id="c21-titi" value="Titi" required><label for="c21-titi">Titi</label>
+          <input type="radio" name="c21" id="c21-tony" value="Tony" required><label for="c21-tony">Tony</label>
+          <input type="radio" name="c21" id="c21-nacho" value="Nacho" required><label for="c21-nacho">Nacho</label>
+          <input type="radio" name="c21" id="c21-nano" value="Nano" required><label for="c21-nano">Nano</label>
+          <input type="radio" name="c21" id="c21-el-enano" value="El Enano" required><label for="c21-el-enano">El Enano</label>
+          <input type="radio" name="c21" id="c21-petalo" value="Pétalo" required><label for="c21-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">22</span>Repartidor</legend>
+        <div class="chips">
+          <input type="radio" name="c22" id="c22-fran" value="Fran" required><label for="c22-fran">Fran</label>
+          <input type="radio" name="c22" id="c22-fede" value="Fede" required><label for="c22-fede">Fede</label>
+          <input type="radio" name="c22" id="c22-alan" value="Alan" required><label for="c22-alan">Alan</label>
+          <input type="radio" name="c22" id="c22-andi" value="Andi" required><label for="c22-andi">Andi</label>
+          <input type="radio" name="c22" id="c22-tobi" value="Tobi" required><label for="c22-tobi">Tobi</label>
+          <input type="radio" name="c22" id="c22-titi" value="Titi" required><label for="c22-titi">Titi</label>
+          <input type="radio" name="c22" id="c22-tony" value="Tony" required><label for="c22-tony">Tony</label>
+          <input type="radio" name="c22" id="c22-nacho" value="Nacho" required><label for="c22-nacho">Nacho</label>
+          <input type="radio" name="c22" id="c22-nano" value="Nano" required><label for="c22-nano">Nano</label>
+          <input type="radio" name="c22" id="c22-el-enano" value="El Enano" required><label for="c22-el-enano">El Enano</label>
+          <input type="radio" name="c22" id="c22-petalo" value="Pétalo" required><label for="c22-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">24</span>Personaje del año</legend>
+        <div class="chips">
+          <input type="radio" name="c24" id="c24-fran" value="Fran" required><label for="c24-fran">Fran</label>
+          <input type="radio" name="c24" id="c24-fede" value="Fede" required><label for="c24-fede">Fede</label>
+          <input type="radio" name="c24" id="c24-alan" value="Alan" required><label for="c24-alan">Alan</label>
+          <input type="radio" name="c24" id="c24-andi" value="Andi" required><label for="c24-andi">Andi</label>
+          <input type="radio" name="c24" id="c24-tobi" value="Tobi" required><label for="c24-tobi">Tobi</label>
+          <input type="radio" name="c24" id="c24-titi" value="Titi" required><label for="c24-titi">Titi</label>
+          <input type="radio" name="c24" id="c24-tony" value="Tony" required><label for="c24-tony">Tony</label>
+          <input type="radio" name="c24" id="c24-nacho" value="Nacho" required><label for="c24-nacho">Nacho</label>
+          <input type="radio" name="c24" id="c24-nano" value="Nano" required><label for="c24-nano">Nano</label>
+          <input type="radio" name="c24" id="c24-el-enano" value="El Enano" required><label for="c24-el-enano">El Enano</label>
+          <input type="radio" name="c24" id="c24-petalo" value="Pétalo" required><label for="c24-petalo">Pétalo</label>
+        </div>
+      </fieldset>
+
+      <h2 class="seccion">Ternas abiertas</h2>
+      <p class="sub seccion-sub">Las finalistas salen de lo que propuso cada uno.</p>
+      <!-- INICIO FINALISTAS: reemplazá todo hasta FIN FINALISTAS con lo que genera la planilla
+           (menú Premios Okupas → Generar HTML de finalistas). -->
+
+      <fieldset class="card">
+        <legend><span class="n">18</span>Mejor anécdota</legend>
+        <p class="vacio">Todavía no se eligieron las finalistas.</p>
+      </fieldset>
+
+      <fieldset class="card">
+        <legend><span class="n">23</span>Frase del año</legend>
+        <p class="vacio">Todavía no se eligieron las finalistas.</p>
+      </fieldset>
+      <!-- FIN FINALISTAS -->
+
+      <div class="barra">
+        <p class="aviso">Tenés que votar en las 24 ternas para poder enviar.</p>
+        <button class="btn" type="submit">Enviar voto</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
