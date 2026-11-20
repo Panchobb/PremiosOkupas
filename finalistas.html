@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finalistas · Premios Okupas</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Generado: qué persona se ve en cada carrusel */
+    .carrusel:has(.ver input:nth-child(1):checked) .persona:nth-child(1) { display: grid; }
+    .carrusel:has(.ver input:nth-child(1):checked) .puntos label:nth-child(1) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(1) .voto:checked) .tu-voto b:nth-child(1) { display: inline; }
+    .carrusel:has(.ver input:nth-child(2):checked) .persona:nth-child(2) { display: grid; }
+    .carrusel:has(.ver input:nth-child(2):checked) .puntos label:nth-child(2) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(2) .voto:checked) .tu-voto b:nth-child(2) { display: inline; }
+    .carrusel:has(.ver input:nth-child(3):checked) .persona:nth-child(3) { display: grid; }
+    .carrusel:has(.ver input:nth-child(3):checked) .puntos label:nth-child(3) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(3) .voto:checked) .tu-voto b:nth-child(3) { display: inline; }
+    .carrusel:has(.ver input:nth-child(4):checked) .persona:nth-child(4) { display: grid; }
+    .carrusel:has(.ver input:nth-child(4):checked) .puntos label:nth-child(4) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(4) .voto:checked) .tu-voto b:nth-child(4) { display: inline; }
+    .carrusel:has(.ver input:nth-child(5):checked) .persona:nth-child(5) { display: grid; }
+    .carrusel:has(.ver input:nth-child(5):checked) .puntos label:nth-child(5) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(5) .voto:checked) .tu-voto b:nth-child(5) { display: inline; }
+    .carrusel:has(.ver input:nth-child(6):checked) .persona:nth-child(6) { display: grid; }
+    .carrusel:has(.ver input:nth-child(6):checked) .puntos label:nth-child(6) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(6) .voto:checked) .tu-voto b:nth-child(6) { display: inline; }
+    .carrusel:has(.ver input:nth-child(7):checked) .persona:nth-child(7) { display: grid; }
+    .carrusel:has(.ver input:nth-child(7):checked) .puntos label:nth-child(7) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(7) .voto:checked) .tu-voto b:nth-child(7) { display: inline; }
+    .carrusel:has(.ver input:nth-child(8):checked) .persona:nth-child(8) { display: grid; }
+    .carrusel:has(.ver input:nth-child(8):checked) .puntos label:nth-child(8) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(8) .voto:checked) .tu-voto b:nth-child(8) { display: inline; }
+    .carrusel:has(.ver input:nth-child(9):checked) .persona:nth-child(9) { display: grid; }
+    .carrusel:has(.ver input:nth-child(9):checked) .puntos label:nth-child(9) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(9) .voto:checked) .tu-voto b:nth-child(9) { display: inline; }
+    .carrusel:has(.ver input:nth-child(10):checked) .persona:nth-child(10) { display: grid; }
+    .carrusel:has(.ver input:nth-child(10):checked) .puntos label:nth-child(10) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(10) .voto:checked) .tu-voto b:nth-child(10) { display: inline; }
+    .carrusel:has(.ver input:nth-child(11):checked) .persona:nth-child(11) { display: grid; }
+    .carrusel:has(.ver input:nth-child(11):checked) .puntos label:nth-child(11) { background: var(--gold); transform: scale(1.35); }
+    .carrusel:has(.persona:nth-child(11) .voto:checked) .tu-voto b:nth-child(11) { display: inline; }
+    /* Generado: un bloque por tarjeta */
+    .wizard:has(#paso-0:checked) .track { transform: translateX(calc(0 * (100% + var(--gap)))); }
+    .wizard:has(#paso-0:checked) .fill { width: 0.00%; }
+    .wizard:has(#paso-1:checked) .track { transform: translateX(calc(-1 * (100% + var(--gap)))); }
+    .wizard:has(#paso-1:checked) .fill { width: 33.33%; }
+    .wizard:has(#paso-2:checked) .track { transform: translateX(calc(-2 * (100% + var(--gap)))); }
+    .wizard:has(#paso-2:checked) .fill { width: 66.67%; }
+    .wizard:has(#paso-3:checked) .track { transform: translateX(calc(-3 * (100% + var(--gap)))); }
+    .wizard:has(#paso-3:checked) .fill { width: 100.00%; }
+    .wizard:has(#paso-0:checked) .paso:nth-child(1),
+    .wizard:has(#paso-1:checked) .paso:nth-child(2),
+    .wizard:has(#paso-2:checked) .paso:nth-child(3),
+    .wizard:has(#paso-3:checked) .paso:nth-child(4) {
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+      transition: opacity var(--vel), transform var(--vel), visibility 0s;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="trofeo">✨</div>
+      <h1>Premios Okupas</h1>
+      <p class="sub">Votá tu favorita entre las finalistas.</p>
+    </header>
+
+    <!-- Pegá en action="..." la URL de tu Apps Script (ver README). -->
+    <form class="wizard" method="post" action="PEGAR_URL_DEL_APPS_SCRIPT">
+      <input type="hidden" name="tipo" value="final">
+      <!-- En qué tarjeta estás (no se envía: form="ninguno") -->
+      <div class="pasos">
+        <input type="radio" name="paso" id="paso-0" form="ninguno" checked>
+        <input type="radio" name="paso" id="paso-1" form="ninguno">
+        <input type="radio" name="paso" id="paso-2" form="ninguno">
+        <input type="radio" name="paso" id="paso-3" form="ninguno">
+      </div>
+      <div class="progreso"><span class="fill"></span></div>
+      <div class="visor">
+        <div class="track">
+
+        <section class="paso requiere">
+          
+          <h2>¿Quién sos?</h2>
+          <p class="ayuda">Tu voto es secreto.</p>
+          <div class="carrusel">
+            <span class="ver">
+              <input type="radio" name="ver-votante" id="ver-votante-0" form="ninguno" checked>
+              <input type="radio" name="ver-votante" id="ver-votante-1" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-2" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-3" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-4" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-5" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-6" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-7" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-8" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-9" form="ninguno">
+              <input type="radio" name="ver-votante" id="ver-votante-10" form="ninguno">
+            </span>
+            <div class="personas">
+              <div class="persona">
+                <label class="flecha" for="ver-votante-10" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-fran" value="Fran" required>
+                <label class="elegible" for="votante-fran">
+                  <span class="foto" data-ini="F"><span style="background-image:url('fotos/fran.jpg')"></span></span>
+                  <span class="nombre">Fran</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-1" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-0" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-fede" value="Fede" required>
+                <label class="elegible" for="votante-fede">
+                  <span class="foto" data-ini="F"><span style="background-image:url('fotos/fede.jpg')"></span></span>
+                  <span class="nombre">Fede</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-2" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-1" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-alan" value="Alan" required>
+                <label class="elegible" for="votante-alan">
+                  <span class="foto" data-ini="A"><span style="background-image:url('fotos/alan.jpg')"></span></span>
+                  <span class="nombre">Alan</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-3" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-2" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-andi" value="Andi" required>
+                <label class="elegible" for="votante-andi">
+                  <span class="foto" data-ini="A"><span style="background-image:url('fotos/andi.jpg')"></span></span>
+                  <span class="nombre">Andi</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-4" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-3" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-tobi" value="Tobi" required>
+                <label class="elegible" for="votante-tobi">
+                  <span class="foto" data-ini="T"><span style="background-image:url('fotos/tobi.jpg')"></span></span>
+                  <span class="nombre">Tobi</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-5" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-4" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-titi" value="Titi" required>
+                <label class="elegible" for="votante-titi">
+                  <span class="foto" data-ini="T"><span style="background-image:url('fotos/titi.jpg')"></span></span>
+                  <span class="nombre">Titi</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-6" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-5" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-tony" value="Tony" required>
+                <label class="elegible" for="votante-tony">
+                  <span class="foto" data-ini="T"><span style="background-image:url('fotos/tony.jpg')"></span></span>
+                  <span class="nombre">Tony</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-7" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-6" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-nacho" value="Nacho" required>
+                <label class="elegible" for="votante-nacho">
+                  <span class="foto" data-ini="N"><span style="background-image:url('fotos/nacho.jpg')"></span></span>
+                  <span class="nombre">Nacho</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-8" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-7" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-nano" value="Nano" required>
+                <label class="elegible" for="votante-nano">
+                  <span class="foto" data-ini="N"><span style="background-image:url('fotos/nano.jpg')"></span></span>
+                  <span class="nombre">Nano</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-9" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-8" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-el-enano" value="El Enano" required>
+                <label class="elegible" for="votante-el-enano">
+                  <span class="foto" data-ini="E"><span style="background-image:url('fotos/el-enano.jpg')"></span></span>
+                  <span class="nombre">El Enano</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-10" aria-label="Siguiente">→</label>
+              </div>
+              <div class="persona">
+                <label class="flecha" for="ver-votante-9" aria-label="Anterior">←</label>
+                <input class="voto" type="radio" name="votante" id="votante-petalo" value="Pétalo" required>
+                <label class="elegible" for="votante-petalo">
+                  <span class="foto" data-ini="P"><span style="background-image:url('fotos/petalo.jpg')"></span></span>
+                  <span class="nombre">Pétalo</span>
+                  <span class="estado"></span>
+                </label>
+                <label class="flecha" for="ver-votante-0" aria-label="Siguiente">→</label>
+              </div>
+            </div>
+            <div class="puntos"><label for="ver-votante-0" title="Fran"></label><label for="ver-votante-1" title="Fede"></label><label for="ver-votante-2" title="Alan"></label><label for="ver-votante-3" title="Andi"></label><label for="ver-votante-4" title="Tobi"></label><label for="ver-votante-5" title="Titi"></label><label for="ver-votante-6" title="Tony"></label><label for="ver-votante-7" title="Nacho"></label><label for="ver-votante-8" title="Nano"></label><label for="ver-votante-9" title="El Enano"></label><label for="ver-votante-10" title="Pétalo"></label></div>
+            <p class="tu-voto">Tu voto: <b>Fran</b><b>Fede</b><b>Alan</b><b>Andi</b><b>Tobi</b><b>Titi</b><b>Tony</b><b>Nacho</b><b>Nano</b><b>El Enano</b><b>Pétalo</b></p>
+          </div>
+          <nav class="nav">
+            <label for="paso--1" class="btn sec oculto">← Atrás</label>
+            <label for="paso-1" class="btn sig">Siguiente →</label>
+          </nav>
+        </section>
+        <!-- INICIO FINALISTAS: reemplazá todo hasta FIN FINALISTAS con lo que genera la planilla
+             (menú Premios Okupas → Generar HTML de finalistas). -->
+        <section class="paso requiere">
+          <p class="contador">Finalistas · 1 de 2</p>
+          <h2>Mejor anécdota</h2>
+          
+          <p class="vacio">Todavía no se eligieron las finalistas.</p>
+          <nav class="nav">
+            <label for="paso-0" class="btn sec">← Atrás</label>
+            <label for="paso-2" class="btn sig">Siguiente →</label>
+          </nav>
+        </section>
+
+        <section class="paso requiere">
+          <p class="contador">Finalistas · 2 de 2</p>
+          <h2>Frase del año</h2>
+          
+          <p class="vacio">Todavía no se eligieron las finalistas.</p>
+          <nav class="nav">
+            <label for="paso-1" class="btn sec">← Atrás</label>
+            <label for="paso-3" class="btn sig">Siguiente →</label>
+          </nav>
+        </section>
+        <!-- FIN FINALISTAS -->
+
+        <section class="paso final">
+          <div class="trofeo">🗳️</div>
+          <h2>¡Listo!</h2>
+          <p class="ayuda">Si querés cambiar algo, volvé atrás.</p>
+          <nav class="nav">
+            <label for="paso-2" class="btn sec">← Atrás</label>
+            <button class="btn" type="submit">Enviar voto 🏆</button>
+          </nav>
+        </section>
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

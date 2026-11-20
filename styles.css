@@ -6,48 +6,92 @@
   --muted: #a59a8c;
   --gold: #e6b450;
   --ok: #7fd18b;
+  --gap: 24px;
+  --vel: 0.45s;
 }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: var(--bg);
+  background: radial-gradient(ellipse at top, #241d14 0%, var(--bg) 60%) fixed, var(--bg);
   color: var(--text);
   font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: clip; /* las tarjetas de costado no generan scroll horizontal */
 }
-main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
-header { text-align: center; margin-bottom: 28px; }
-.trofeo { font-size: 44px; }
+main { max-width: 560px; margin: 0 auto; padding: 28px 16px 40px; }
+header { text-align: center; margin-bottom: 20px; }
+.trofeo { font-size: 40px; }
 h1 {
-  margin: 4px 0 6px;
-  font-size: clamp(30px, 7vw, 46px);
+  margin: 2px 0 4px;
+  font-size: clamp(28px, 7vw, 40px);
   letter-spacing: -0.02em;
   color: var(--gold);
 }
 .sub { color: var(--muted); margin: 0; }
 
-/* Cada terna */
-.card {
+/* ------------------------------------------------------------------ wizard
+   Cada tarjeta es un "paso". Unos radios ocultos (#paso-N) guardan en qué
+   tarjeta estás; los botones Anterior / Siguiente son <label> que los marcan.
+   Las reglas de cada paso están en el <style> de cada página. */
+.pasos input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.progreso {
+  height: 6px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.progreso .fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--gold);
+  border-radius: 99px;
+  transition: width var(--vel) ease;
+}
+
+.visor { overflow: clip; overflow-clip-margin: 12px; }
+.track {
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
+  transition: transform var(--vel) cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.paso {
+  flex: 0 0 100%;
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 16px 18px 18px;
-  margin: 0 0 14px;
-  min-width: 0;
+  border-radius: 20px;
+  padding: 22px 20px 20px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  /* Las tarjetas que no están activas se achican, se apagan y no se pueden tocar */
+  opacity: 0.25;
+  transform: scale(0.88) rotate(-1.5deg);
+  visibility: hidden;
+  transition: opacity var(--vel), transform var(--vel), visibility 0s var(--vel);
 }
-legend {
-  float: left;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 12px;
-  font-size: 18px;
-  font-weight: 700;
-}
-legend .n { color: var(--muted); font-size: 13px; font-weight: 400; margin-right: 10px; }
-/* Tilde verde cuando la terna ya tiene voto */
-.card:has(input:checked) legend::after { content: ' ✓'; color: var(--ok); }
+/* Cuál tarjeta está activa lo decide el <style> de cada página. */
 
-/* Opciones como botones: el radio queda oculto y se ve el label */
-.chips { clear: both; display: flex; flex-wrap: wrap; gap: 8px; }
+.contador {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.paso h2 { margin: 0 0 16px; font-size: 26px; line-height: 1.2; }
+.paso h2::after { content: ''; }
+.paso:has(.voto:checked) h2::after { content: ' ✓'; color: var(--ok); font-size: 20px; }
+.paso .ayuda { color: var(--muted); margin: -8px 0 16px; font-size: 14px; }
+
+/* Opciones */
+.chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; }
 .chips input {
   position: absolute;
   opacity: 0;
@@ -56,33 +100,117 @@ legend .n { color: var(--muted); font-size: 13px; font-weight: 400; margin-right
 }
 .chips label {
   border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 8px 14px;
-  font-size: 15px;
+  border-radius: 12px;
+  padding: 11px 12px;
+  text-align: center;
   cursor: pointer;
   user-select: none;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
 }
 .chips label:hover { border-color: var(--gold); }
+.chips label:active { transform: scale(0.96); }
 .chips input:focus-visible + label { outline: 2px solid var(--gold); outline-offset: 2px; }
 .chips input:checked + label {
   background: var(--gold);
   border-color: var(--gold);
   color: #1a1205;
-  font-weight: 600;
+  font-weight: 700;
 }
+.chips.largas { grid-template-columns: 1fr; }
+.chips.largas label { text-align: left; white-space: pre-line; }
 
-/* Ternas abiertas */
-.seccion { margin: 36px 0 2px; font-size: 22px; color: var(--gold); text-align: center; }
-.seccion-sub { text-align: center; margin-bottom: 16px; }
-.vacio { clear: both; color: var(--muted); font-size: 14px; margin: 0; }
-.chips.largas { flex-direction: column; }
-.chips.largas label { border-radius: 12px; padding: 10px 14px; white-space: pre-line; }
+/* ------------------------------------------------------------------ carrusel de personas
+   Se ve una persona a la vez: foto grande, nombre abajo y flechas a los costados.
+   Las flechas mueven unos radios ocultos (.ver) que dicen a quién estás mirando;
+   tocar la foto marca el voto (.voto). Qué persona se muestra lo decide el
+   <style> de cada página. */
+.carrusel .ver input { position: absolute; opacity: 0; pointer-events: none; }
+.persona {
+  display: none;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  gap: 6px;
+  animation: aparecer 0.3s ease;
+}
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+.flecha {
+  display: grid;
+  place-items: center;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.flecha:hover { border-color: var(--gold); }
+.flecha:active { transform: scale(0.9); }
+.persona .voto { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.elegible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.foto {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 4 / 3;
+  border: 3px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2a231b, #15120f);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+/* Si no hay foto, se ve la inicial */
+.foto::before {
+  content: attr(data-ini);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 72px;
+  font-weight: 800;
+  color: var(--gold);
+  opacity: 0.55;
+}
+.foto > span { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.elegible:active .foto { transform: scale(0.97); }
+.nombre { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.estado { font-size: 13px; color: var(--muted); }
+.estado::before { content: 'Tocá la foto para votar'; }
+.voto:focus-visible + .elegible .foto { outline: 2px solid var(--gold); outline-offset: 3px; }
+.voto:checked + .elegible .foto { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(230, 180, 80, 0.25); }
+.voto:checked + .elegible .nombre { color: var(--gold); }
+.voto:checked + .elegible .estado { color: var(--ok); }
+.voto:checked + .elegible .estado::before { content: '✓ Tu voto'; }
+
+/* Puntitos para saber en qué persona estás (también se pueden tocar) */
+.puntos { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.puntos label {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.tu-voto { text-align: center; color: var(--muted); font-size: 14px; margin: 10px 0 0; visibility: hidden; }
+.carrusel:has(.voto:checked) .tu-voto { visibility: visible; }
+.tu-voto b { display: none; color: var(--gold); }
+
 textarea {
-  clear: both;
   display: block;
   width: 100%;
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid var(--line);
   background: var(--bg);
   color: var(--text);
@@ -90,20 +218,30 @@ textarea {
   resize: vertical;
 }
 textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
-.nota { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+.vacio { color: var(--muted); margin: 0; }
 
-/* Botón de enviar */
-.barra { text-align: center; margin-top: 24px; }
-.aviso { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
-form:valid .aviso { visibility: hidden; }
+/* Navegación */
+.nav { display: flex; gap: 10px; margin-top: 20px; }
 .btn {
+  flex: 1;
+  display: inline-block;
+  text-align: center;
   background: var(--gold);
   color: #1a1205;
   border: 0;
-  border-radius: 10px;
-  padding: 14px 28px;
+  border-radius: 12px;
+  padding: 13px 16px;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s, transform 0.15s;
 }
-form:invalid .btn { opacity: 0.45; }
+.btn:active { transform: scale(0.97); }
+.btn.sec { background: transparent; color: var(--text); border: 1px solid var(--line); flex: 0 0 auto; }
+.btn.sec.oculto { visibility: hidden; }
+/* No se puede seguir hasta elegir a alguien */
+.paso.requiere:not(:has(.voto:checked)) .sig { opacity: 0.35; pointer-events: none; }
+
+.final { text-align: center; }
+.final .trofeo { font-size: 56px; }
