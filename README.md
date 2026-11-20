@@ -7,7 +7,7 @@ Web hecha solo con HTML y CSS. Los votos se guardan en una planilla de Google Sh
 
 ## Fotos
 
-Poné una foto por persona en la carpeta `fotos/` con los nombres que figuran en `fotos/LEEME.md` (por ejemplo `fotos/fran.jpg`). Si falta alguna, se ve la inicial.
+Poné una foto por persona en la carpeta `fotos/` con los nombres que figuran en `fotos/LEEME.md` (por ejemplo `fotos/fran.jpg`). Mientras falte alguna, se ve una silueta genérica (`fotos/sin-foto.webp`).
 
 ## Puesta en marcha (una sola vez)
 

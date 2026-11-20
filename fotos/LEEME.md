@@ -18,4 +18,4 @@ Poné acá una foto por persona, en `.jpg` y con **estos nombres exactos**:
 
 - Se ven en formato apaisado (4:3) y se recortan solas para llenar el cuadro. Conviene que la cara quede en el centro.
 - Mejor si pesan poco: unos 800 px de ancho alcanzan.
-- Si falta alguna, en su lugar se ve la inicial del nombre.
+- Si falta alguna, se ve la silueta genérica (`sin-foto.webp`). No la borres.

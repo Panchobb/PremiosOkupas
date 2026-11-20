@@ -8,7 +8,7 @@ const CATEGORIAS = [
   '+ Levanté', 'Come gatos', 'Desaparecido', 'Héroe', 'Comediante', 'NPC',
   'Fumón', 'Borracho', 'Plot twist', 'Organizador', 'Segundero', 'Mejor anécdota',
   'Chófer', 'Desarrollo de pj', 'Pj revelación', 'Repartidor', 'Frase del año',
-  'Personaje del año',
+  'Pelado', 'Mejor pelado', 'Futuro pelado', 'Personaje del año',
 ];
 // Ternas donde cada uno escribe; después vos elegís finalistas y se votan en finalistas.html.
 const ABIERTAS = ['Mejor anécdota', 'Frase del año'];

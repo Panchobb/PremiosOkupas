@@ -166,20 +166,9 @@ h1 {
   border: 3px solid var(--line);
   border-radius: 16px;
   overflow: hidden;
-  background: linear-gradient(135deg, #2a231b, #15120f);
+  /* Foto genérica: se ve hasta que la persona tenga su foto en fotos/ */
+  background: #c4c4c4 url('fotos/sin-foto.webp') center / cover no-repeat;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
-}
-/* Si no hay foto, se ve la inicial */
-.foto::before {
-  content: attr(data-ini);
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: 72px;
-  font-weight: 800;
-  color: var(--gold);
-  opacity: 0.55;
 }
 .foto > span { position: absolute; inset: 0; background-size: cover; background-position: center; }
 .elegible:active .foto { transform: scale(0.97); }
